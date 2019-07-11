@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Product</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Little Closet template">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/kayode-adechinan/static/core/menu/img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/styles/bootstrap-4.1.2/bootstrap.min.css">
+	<link href="/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/static/plugins/flexslider/flexslider.css">
+	<link rel="stylesheet" type="text/css" href="/static/styles/product.css">
+	<link rel="stylesheet" type="text/css" href="/static/styles/product_responsive.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+		<div class="header_overlay"></div>
+		<div class="header_content d-flex flex-row align-items-center justify-content-start">
+			<div class="logo">
+				<a href="/">
+					<img src="/static/images/comparez.png" height="60" width="130">
+				</a>
+			</div>
+			<div class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+
+			<div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
+				<!-- Phone -->
+				<div class="header_phone d-flex flex-row align-items-center justify-content-start">
+					<div><div><img src="/static/images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
+					<div>+221 338681365</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="super_container_inner">
+		<div class="super_overlay"></div>
+
+		<!-- Home -->
+
+		<div class="home">
+			<div class="home_container d-flex flex-column">
+					<img src="http://137.74.199.121/img/achat/banner2_2.jpg" width="100%" height="160Opx">
+			</div>
+		</div>
+
+		<!-- Product -->
+		<div class="product">
+			<div class="container">
+				<div class="row">
+
+					<!-- Product Image -->
+					<div class="col-lg-5">
+						<img src="{{data[5]}}">
+					</div>
+
+					<!-- Product Info -->
+					<div class="col-lg-7 product_col">
+						<div class="product_info">
+							<div class="product_name">{{data[1]}}</div>
+							<div class="product_rating_container d-flex flex-row align-items-center justify-content-start">
+								<div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
+								<div class="product_reviews">4.7 out of (3514)</div>
+								<div class="product_reviews_link"><a href="#">Reviews</a></div>
+							</div>
+							<div class="product_price" align="center">{{data[7]}}<span>XOF</span></div><br>
+							<div align="center">
+								<img src="{{data[4]}}" align="center" height="100px" width="100px">
+							</div>
+							<div class="product_buttons">
+								<div class="text-center d-flex flex-row align-items-center justify-content-center">
+										<div class="product_button product_cart text-center d-flex flex-column align-items-center justify-content-center bg-success" data-toggle="modal" data-target="#modalContactForm">
+											<div>
+												<div>
+														<img src="/static/images/cart.svg" class="svg" alt="">
+												</div>
+											</div>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+
+		<!-- Boxes -->
+
+		<div class="boxes">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="box d-flex flex-row align-items-center justify-content-start">
+							<div class="mt-auto"><div class="box_image"><img src="/static/images/boxes_1.png" alt=""></div></div>
+							<div class="box_content">
+								<div class="box_title">Paiement échelonné</div>
+								<div class="box_text">Vous pouvez payer le produit en 2 ou 3 mois</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 box_col">
+						<div class="box d-flex flex-row align-items-center justify-content-start">
+							<div class="mt-auto"><div class="box_image"><img src="/static/images/boxes_2.png" alt=""></div></div>
+							<div class="box_content">
+								<div class="box_title">Livraison</div>
+								<div class="box_text">Faites vous livrer chez vous !</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+		  aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header text-center">
+		        <h4 class="modal-title w-100 font-weight-bold">Remplir le formulaire</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body mx-3">
+						<form action="/upload1" method="POST">
+							<div class="row">
+								<div class="col">
+									<input type="text" class="form-control" placeholder="Prénom" name="prenom" required>
+								</div>
+								<div class="col">
+									<input type="text" class="form-control" placeholder="Nom" name="nom" required>
+								</div>
+							</div><br>
+							<div class="col">
+								<select class="custom-select" name="profession" required>
+  									<option selected>Êtes vous?</option>
+  									<option value="Etudiant">Etudiant</option>
+  									<option value="Commerçant">Commerçant</option>
+  									<option value="Salarié dans le privé">Salarié dans le privé</option>
+									<option value="Profession libérale">Profession libérale</option>
+									<option value="Entrepreneur">Entrepreneur</option>
+								</select>
+							</div><br>
+							<div class="col">
+								<label>Votre tranche de salaire</label>
+								<div class="form-check">
+  								<input class="form-check-input" type="radio" name="exampleRadios" value="à 100.000" checked>
+  								<label class="form-check-label"> à 100.000</label>
+								</div><br>
+								<div class="form-check">
+  								<input class="form-check-input" type="radio" name="exampleRadios" value="Entre 100.000 et 300.000" checked>
+  								<label class="form-check-label">Entre 100.000 et 300.000</label>
+								</div><br>
+								<div class="form-check">
+  								<input class="form-check-input" type="radio" name="exampleRadios" value="Entre 300.000 et 400.000" checked>
+  								<label class="form-check-label">Entre 300.000 et 400.000</label>
+								</div><br>
+								<div class="form-check">
+  								<input class="form-check-input" type="radio" name="exampleRadios" value="Entre 400.000 et 500.000" checked>
+  								<label class="form-check-label">Entre 400.000 et 500.000</label>
+								</div><br>
+								<div class="form-check">
+  								<input class="form-check-input" type="radio" name="exampleRadios" value="Entre 500.000 et 750.000" checked>
+  								<label class="form-check-label">Entre 500.000 et 750.000</label>
+								</div><br>
+								<div class="form-check">
+  								<input class="form-check-input" type="radio" name="exampleRadios" value="Entre 750.000 et 1.000.000" checked>
+  								<label class="form-check-label">Entre 750.000 et 1.000.000</label>
+								</div><br>
+								<div class="form-check">
+  								<input class="form-check-input" type="radio" name="exampleRadios" value="> à 1.000.000" checked>
+  								<label class="form-check-label"> > à 1.000.000</label>
+								</div><br>
+							</div>
+							<div class="form-group row">
+    							<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    							<div class="col-sm-10">
+      								<input type="text" class="form-control" id="inputEmail3" placeholder="Votre Email" name="email" required>
+    							</div>
+  							</div>
+  							<div class="form-group row">
+    							<label for="inputPassword3" class="col-sm-2 col-form-label">Telephone</label>
+    							<div class="col-sm-10">
+      								<input type="text" class="form-control" id="inputPassword3" placeholder="Votre Telephone" name="telephone" required>
+    							</div>
+  							</div>
+							<div class="form-group row">
+    							<div class="col-sm-10">
+      								<input name="prodName" type="hidden" value="{{data[1]}}">
+    							</div>
+  							</div>
+							<div class="modal-footer">
+        						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        						<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modalContactForm">Envoyer</button>
+      						</div>
+
+						</form>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+
+</div>
+
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/styles/bootstrap-4.1.2/popper.js"></script>
+<script src="/static/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="/static/plugins/greensock/TweenMax.min.js"></script>
+<script src="/static/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/static/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/static/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/static/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/static/plugins/easing/easing.js"></script>
+<script src="/static/plugins/progressbar/progressbar.min.js"></script>
+<script src="/static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="/static/plugins/flexslider/jquery.flexslider-min.js"></script>
+<script src="/static/js/product.js"></script>
+</body>
+</html>

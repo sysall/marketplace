@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>COMPAREZ SHOPPING STORE</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/kayode-adechinan/static/core/menu/img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="/static/styles/bootstrap-4.1.2/bootstrap.min.css">
+	<link href="/static/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="/static/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="/static/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="/static/plugins/OwlCarousel2-2.2.1/animate.css">
+	<link rel="stylesheet" type="text/css" href="/static/styles/main_styles.css">
+	<link rel="stylesheet" type="text/css" href="/static/styles/responsive.css">
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+<div class="super_container">
+
+	<!-- Header -->
+
+	<header class="header">
+		<div class="header_overlay"></div>
+		<div class="header_content d-flex flex-row align-items-center justify-content-start">
+			<div class="logo">
+				<a href="/">
+					<img src="/static/images/comparez.png" height="60" width="130">
+				</a>
+			</div>
+
+			<div class="header_right d-flex flex-row align-items-center justify-content-start ml-auto">
+				<!-- Phone -->
+				<div class="header_phone d-flex flex-row align-items-center justify-content-start">
+					<div><div><img src="/static/images/phone.svg" alt="https://www.flaticon.com/authors/freepik"></div></div>
+					<div>+221 338681365</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<br><br><br><br>
+
+	<div class="super_container_inner">
+		<!-- Home -->
+		<div>
+			<!-- Home Slider -->
+				<img src="http://137.74.199.121/img/achat/banner1.jpg">
+		</div>
+
+		<!-- Products -->
+
+		<div class="products">
+			<div class="container">
+				<div class="row">
+					<div class="col" style="text-align: center">
+						<a href="#"><button type="button" class="btn btn-outline-dark btn-lg">Congélateurs & frigo</button></a>
+					</div>
+					<div class="col" style="text-align: center">
+						<a href="/climatiseur"><button type="button" class="btn btn-outline-dark btn-lg">Climatisateurs</button></a>
+					</div>
+					<div class="col" style="text-align: center">
+						<a href="#"><button type="button" class="btn btn-outline-dark btn-lg">Cuisinières</button></a>
+					</div>
+					<div class="col" style="text-align: center">
+						<a href="television"><button type="button" class="btn btn-outline-dark btn-lg">Télévisions</button></a>
+					</div>
+				</div>
+				<div class="row products_row">
+					<!-- Product-->
+					{% for item in data %}
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 text-center">
+						<a href="/index?productId={{item[0]}}">
+							<img height="200" width="200" src="{{item[5]}}">
+								<div>
+                                	<h2 style="font-size: 15px; color: #3a2c2c">{{item[1]}}</h2>
+								</div>
+								<p><img src="{{item[3]}}" alt=""></p>
+								<p><br>
+									<a href="/index?productId={{item[0]}}" role="button" class="btn btn-default cbtn" style="border-radius: 20px; border-color:black;">Consulter »</a>
+                                </p>
+                                <p>
+                                    <span>{{item[7]}}</span>&nbsp;FCFA
+                                </p>
+						</a>
+					</div>
+					{% endfor %}
+
+
+				</div>
+			</div>
+		</div>
+		<!-- Features -->
+
+		<div class="features">
+			<div class="container">
+				<div class="row">
+
+					<!-- Feature -->
+					<div class="col-lg-4 feature_col">
+						<div class="feature d-flex flex-row align-items-start justify-content-start">
+							<div class="feature_left">
+								<div class="feature_icon"><img src="/static/images/icon_1.svg" alt=""></div>
+							</div>
+							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
+								<div class="feature_title">PAIEMENT ÉCHELONNÉ</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Feature -->
+					<div class="col-lg-4 feature_col">
+						<div class="feature d-flex flex-row align-items-start justify-content-start">
+							<div class="feature_left">
+								<div class="feature_icon ml-auto mr-auto"><img src="/static/images/icon_2.svg" alt=""></div>
+							</div>
+							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
+								<div class="feature_title">Premium Products</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Feature -->
+					<div class="col-lg-4 feature_col">
+						<div class="feature d-flex flex-row align-items-start justify-content-start">
+							<div class="feature_left">
+								<div class="feature_icon"><img src="/static/images/icon_3.svg" alt=""></div>
+							</div>
+							<div class="feature_right d-flex flex-column align-items-start justify-content-center">
+								<div class="feature_title">Free Delivery</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>
+
+
+
+<script src="/static/js/jquery-3.2.1.min.js"></script>
+<script src="/static/styles/bootstrap-4.1.2/popper.js"></script>
+<script src="/static/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="/static/plugins/greensock/TweenMax.min.js"></script>
+<script src="/static/plugins/greensock/TimelineMax.min.js"></script>
+<script src="/static/plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="/static/plugins/greensock/animation.gsap.min.js"></script>
+<script src="/static/plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="/static/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/static/plugins/easing/easing.js"></script>
+<script src="/static/plugins/progressbar/progressbar.min.js"></script>
+<script src="/static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="/static/js/custom.js"></script>
+</body>
+</html>
